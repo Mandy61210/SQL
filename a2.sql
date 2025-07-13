@@ -1,0 +1,34 @@
+CREATE TABLE IF NOT EXISTS STUDENT (
+ROLL_NO TEXT PRIMARY KEY,
+NAME TEXT NOT NULL,
+ADDRESS VARCHAR,
+PHONE TEXT,
+AGE INTEGER
+);
+
+INSERT INTO STUDENT(ROLL_NO, NAME, ADDRESS, PHONE, AGE) VALUES
+ ('1','Ram','Dehli','******',18),
+ ('2','Ramesh','Gurgaon','******',18),
+ ('3','Sujit','Rohtak','******',20),
+ ('4','Suresh','Dehli','******',18),
+ ('5','Aman','Rohtak','******',20),
+ ('6','Harsh','Gurgaon','******',18);
+
+
+
+SELECT * FROM STUDENT;
+
+
+SELECT * FROM STUDENT WHERE AGE = 18 AND ADDRESS = 'Dehli';
+
+
+SELECT * FROM STUDENT WHERE AGE = 18 AND NAME = 'Ram';
+
+
+SELECT * FROM STUDENT WHERE NAME = 'RAM' OR NAME = 'Sujit';
+
+
+SELECT * FROM STUDENT WHERE NAME = 'RAM' OR AGE = '20';
+
+
+SELECT * FROM STUDENT WHERE AGE = 18 AND (NAME = 'Ram' OR NAME = 'Ramesh);
